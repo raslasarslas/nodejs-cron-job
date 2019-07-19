@@ -8,7 +8,7 @@ const cronTime = '00 00 18 * * *';
 const job = new CronJob(
   cronTime,
   function() {
-    // Put job here
+    // Put your job here
   },
   null,
   true,
