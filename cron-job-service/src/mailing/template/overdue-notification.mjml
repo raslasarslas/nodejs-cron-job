@@ -1,0 +1,12 @@
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="20px" align="center" color="#3697ff">[Company name]</mj-text>
+        <mj-divider border-color="#3697ff"></mj-divider>
+        <mj-text font-size="16px">Your email template content here</mj-text>
+       
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

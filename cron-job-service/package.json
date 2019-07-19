@@ -1,0 +1,33 @@
+{
+  "name": "app-cron",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm-run-all build:dev --parallel watch:dev start:dev",
+    "start:prod": "NODE_ENV=production node dist/index.js",
+    "build:prod": "parcel build --no-minify src/index.ts --target node",
+    "start:dev": "nodemon dist/index.js",
+    "build:dev": "parcel build src/index.ts --target node",
+    "watch:dev": "parcel watch src/index.ts --target node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.7",
+    "parcel-bundler": "^1.10.1",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cron": "^1.7.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.3",
+    "knex": "^0.16.3",
+    "moment": "^2.24.0",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.7",
+    "npm-run-all": "^4.1.5",
+    "sparkpost": "^2.1.3"
+  }
+}
