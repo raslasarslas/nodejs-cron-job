@@ -1,0 +1,24 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'example-db'
+    ports:
+      - '3306:3306'
+  cron-service:
+    build:
+      context: cron-job-service
+      dockerfile: Dockerfile
+    ports:
+      - '4000:4000'
+      - '9220:9229'
+    volumes:
+      - ./cron-job-service/src:/cron/src
+      - ./cron-job-service/dist:/cron/dist
+    entrypoint: npm run start
+    depends_on:
+      - mysql
+    env_file:
+      - cron-job-service/.env
